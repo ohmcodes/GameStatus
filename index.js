@@ -35,7 +35,7 @@ client.on('ready', async () => {
             var ip = await ipv4.v4();
             await gdig.query({
                 type: 'minecraftping',
-                host: process.env.ip,
+                host: ip,
                 port: process.env.port
             }).then(async (state) => {
                 const embed = new MessageEmbed()
