@@ -17,6 +17,8 @@ client.on('ready', async () => {
 	await channel.bulkDelete(100, true);
     const timeStart = new Date();
 
+    console.log("Bot is online!.");
+
     function truncate(str, n){
         return (str.length > n) ? str.substr(0, n-1) + '&hellip;' : str;
     };
@@ -26,7 +28,23 @@ client.on('ready', async () => {
         .setTitle("PH Ascendants Minecraft Server")
         .setDescription("Battle mobs, construct shelter, and explore the landscape—it’s all in a day’s work when you try to survive and thrive in Survival Mode.")
         .setThumbnail("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROBPr8KuYanX3FwExoxcePgjy007yyhcgHuQ&usqp=CAU")
-
+        .addFields({
+            name: 'Status',
+            value: 'Offline',
+            inline: true
+        }, {
+            name: 'Server IP',
+            value: '' + state.connect,
+            inline: true
+        },   {
+            name: 'Vote Link',
+            value: '[Vote Now!](https://minecraftlist.org/)',
+            inline: true
+        },{
+            name: 'Players',
+            value: '' + state.players.length + '/'+state.maxplayers,
+            inline: true
+        });
 
     channel.send({
         embeds: [embeded]
