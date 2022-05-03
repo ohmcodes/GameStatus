@@ -1,0 +1,29 @@
+{
+  "name": "gamestats",
+  "version": "1.0.0",
+  "description": "Gamestatus using gamedig",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohmcodes/GameStatus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ohmcodes/GameStatus/issues"
+  },
+  "homepage": "https://github.com/ohmcodes/GameStatus#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0",
+    "gamedig": "^4.0.4",
+    "moment": "^2.29.3",
+    "nodemon": "^2.0.16",
+    "public-ip": "^5.0.0"
+  }
+}
